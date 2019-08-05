@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/e4938ad47b.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Shopping Cart</h1>
+    </header>
+    <main>
+
+        <div class="main-head ">
+            <h3>Select your items</h3>
+            <i class="fas fa-shopping-basket"></i>
+            <span id="total">0 </span>
+            <span class="dollar">$</span>
+            <p> Basket </p>
+        </div>
+        <div class="select">
+            <div class="article1 articles">
+                <span>First Article</span>
+                <span>100$</span>
+                <img class="images" src=https://media.chausport.com/media/catalog/product/cache/1/image/473x346/9df78eab33525d08d6e5fb8d27136e95/1/2/12285-chaussures-nike-cap-metal-futura-bc-t118-1.png alt="img1">
+
+                <button class="btnstyle" onclick="increment()"><i class="fas fa-plus"></i></button>
+                <span id="itemvalue">0</span>
+                <button class="btnstyle" onclick="decrement()"><i class="fas fa-minus"></i></button>
+                <span id="total1">0</span> <span>$</span>
+            </div>
+            <div class="article2 articles">
+                <span>Second Article</span>
+                <span>200$</span>
+                <img class="images" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Acne_Jeans_Nye_cowboybukser.jpg/250px-Acne_Jeans_Nye_cowboybukser.jpg" alt="img2">
+                <button class="btnstyle" onclick="increment1()"> <i class="fas fa-plus"></i></button>
+                <span id="itemvalue1">0</span>
+                <button class="btnstyle" onclick="decrement1()"><i class="fas fa-minus"></i></button>
+                <span id="total2">0</span><span>$</span>
+            </div>
+            <div class="article3 articles">
+                <span>Third Article</span>
+                <span>300$</span>
+                <img class="images" src="https://kapitales.fr/wp-content/uploads/2017/07/PS_K369_OXFORDGREY-600x600.jpg" alt="">
+                <button class="btnstyle" onclick="increment2()"> <i class="fas fa-plus"></i></button>
+                <span id="itemvalue3">0</span>
+                <button class="btnstyle" onclick="decrement2()"> <i class="fas fa-minus"></i></button>
+                <span id="total3">0</span><span>$</span>
+
+            </div>
+
+
+        </div>
+
+    </main>
+    <script>
+        function total() {
+            var total = document.getElementById("total"); /* innerhtml => valeur */
+            var total1 = document.getElementById("total1").innerHTML;
+            var total2 = document.getElementById("total2").innerHTML;
+            var total3 = document.getElementById("total3").innerHTML;
+            var sum = parseInt(total1) + parseInt(total2) + parseInt(total3);
+            total.innerHTML = sum;
+        }
+
+
+
+        function increment() {
+
+
+            var a = document.getElementById('itemvalue'); /* get element on changing value*/
+
+            var initial = parseInt(a.innerHTML);
+            initial += 1;
+            a.innerHTML = initial.toString();
+            var b = document.getElementById('total1');
+            b.innerHTML = initial * 100;
+            total();
+
+
+        }
+
+        function increment1() {
+
+
+            var a = document.getElementById('itemvalue1'); /* get element on changing value*/
+
+            var initial = parseInt(a.innerHTML);
+            initial += 1;
+            a.innerHTML = initial.toString();
+            var b = document.getElementById('total2');
+            b.innerHTML = initial * 200;
+            total();
+
+
+
+
+        }
+
+        function increment2() {
+
+
+            var a = document.getElementById('itemvalue3'); /* get element on changing value*/
+
+            var initial = parseInt(a.innerHTML);
+            initial += 1;
+            a.innerHTML = initial.toString();
+            var b = document.getElementById('total3');
+            b.innerHTML = initial * 300;
+            total();
+
+
+
+
+        }
+
+        function decrement() {
+
+
+            var a = document.getElementById('itemvalue');
+            var initial = parseInt(a.innerHTML);
+            if (initial > 0)
+                initial -= 1;
+            a.innerHTML = initial.toString();
+            var b = document.getElementById('total1');
+            b.innerHTML = initial * 100;
+            total();
+
+
+
+
+
+        }
+
+        function decrement1() {
+
+
+            var a = document.getElementById('itemvalue1');
+            var initial = parseInt(a.innerHTML);
+            if (initial > 0)
+                initial -= 1;
+            a.innerHTML = initial.toString();
+            var b = document.getElementById('total2');
+            b.innerHTML = initial * 200;
+            total();
+
+
+
+
+
+        }
+
+        function decrement2() {
+
+
+            var a = document.getElementById('itemvalue3');
+            var initial = parseInt(a.innerHTML);
+            if (initial > 0)
+                initial -= 1;
+            a.innerHTML = initial.toString();
+            var b = document.getElementById('total3');
+            b.innerHTML = initial * 300;
+            total();
+
+
+
+
+
+        }
+    </script>
+
+
+</body>
+
+</html>

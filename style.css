@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.images {
+    width: 250px;
+    height: 200px;
+    background-color: white;
+    border-radius: 8px;
+    margin: 25px;
+}
+
+.articles {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #B0B1B6;
+}
+
+.select {
+    border-radius: 10px;
+}
+
+.main-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+    position: relative;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 8px;
+    color: white
+}
+
+.fa-shopping-basket {
+    position: absolute;
+    right: 70px;
+    color: orange;
+    font-size: 28px;
+    top: 14px;
+}
+
+.total {
+    position: absolute;
+    right: 65px;
+}
+
+.btnstyle {
+    border: none;
+    background-color: white;
+}
+
+.btnstyle:hover {
+    cursor: pointer;
+}
+
+main {
+    width: 800px;
+    margin-left: 250px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+body {
+    background-color: midnightblue
+}
+
+#total {
+    position: absolute;
+    right: 170px;
+}
+
+.dollar {
+    position: absolute;
+    right: 120px
+}
